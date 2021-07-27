@@ -1,0 +1,293 @@
+@font-face {
+  font-family: lemonmilk;
+  src: url(../fonts/LEMONMILK-Bold.otf);
+}
+@font-face {
+  font-family: montserrat;
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: oxygen;
+  src: url(../fonts/Oxygen-Regular.ttf);
+}
+ul::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #f30050;
+  border-radius: 15px;
+}
+
+ul::-webkit-scrollbar-thumb:hover {
+  background: radial-gradient(circle, #f8dc2a 19%, #f30050 100%);
+}
+
+ul::-webkit-scrollbar-track {
+  background: #f8dc2a;
+  border-radius: 15px;
+  box-shadow: inset -1px 2px 30px #f0f0f0;
+}
+
+ul::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #f30050;
+  border-radius: 15px;
+}
+
+ul::-webkit-scrollbar-thumb:hover {
+  background: radial-gradient(circle, #f8dc2a 19%, #f30050 100%);
+}
+
+ul::-webkit-scrollbar-track {
+  background: #f8dc2a;
+  border-radius: 15px;
+  box-shadow: inset -1px 2px 30px #f0f0f0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+body {
+  font-family: "montserrat";
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav .bars {
+  width: 90px;
+  height: 3px;
+  background-color: #fff;
+  position: fixed;
+  top: 60px;
+  right: 60px;
+  z-index: 10;
+}
+.nav .bars::before {
+  content: "";
+  position: fixed;
+  top: 75px;
+  right: 60px;
+  width: 60px;
+  height: 3px;
+  background-color: #fff;
+}
+
+.jumbotron {
+  background-color: #000;
+  height: 100vh;
+  min-height: 550px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 1200px) {
+  .jumbotron {
+    padding: 0 10%;
+  }
+}
+.jumbotron .logo {
+  margin-top: 200px;
+  width: 500px;
+  position: relative;
+}
+@media screen and (max-height: 450px) {
+  .jumbotron .logo {
+    margin-top: 50px;
+  }
+}
+.jumbotron .logo img {
+  width: 80%;
+}
+.jumbotron .logo .map {
+  position: absolute;
+  right: -60%;
+}
+@media screen and (max-width: 1200px) {
+  .jumbotron .logo .map {
+    right: -20%;
+  }
+}
+.jumbotron .logo .map video {
+  width: 100%;
+}
+.jumbotron .getFood {
+  display: flex;
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s;
+  -webkit-animation-name: thunders;
+          animation-name: thunders;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.jumbotron .getFood img {
+  margin-left: 10px;
+  max-width: 10px;
+}
+@-webkit-keyframes thunders {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thunders {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.jumbotron .getFood:hover {
+  -webkit-animation-duration: 0s;
+          animation-duration: 0s;
+  transform: scale(1.1);
+}
+
+#restaurants {
+  height: 100vh;
+  padding: 100px 0;
+}
+#restaurants .categories {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+#restaurants .categories .category-icon {
+  position: relative;
+  margin-bottom: 20px;
+  width: calc( 100% / 12);
+  transition: 0.5s;
+  cursor: pointer;
+  padding: 10px 5px;
+}
+#restaurants .categories .category-icon:hover .content {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#restaurants .categories .category-icon:hover .content::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  bottom: -50px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 80px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #cacaca;
+}
+#restaurants .categories .category-icon:hover img {
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+@-webkit-keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(10deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  70% {
+    transform: rotate(-20deg);
+  }
+  90% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(10deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  70% {
+    transform: rotate(-20deg);
+  }
+  90% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+#restaurants .categories .category-icon .content .icon {
+  text-align: center;
+}
+#restaurants .categories .category-icon .content .icon img {
+  max-height: 40px;
+}
+#restaurants .categories .category-icon .content .type-name {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+}

@@ -1,0 +1,109 @@
+//!!!!!!!!!!!!! CREATE RESTAURANT
+.edit_container.card{
+    margin-top: 150px;
+    margin-bottom: 70px;
+
+    .card-body{
+        .form-check {
+            display: inline-block;
+            width: 24%;
+        }
+
+    }
+}
+//!!!!!!!!!!!! CREATE FOOD
+.container_create_food.card {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    .card-body form{
+        .form-check {
+            display: inline-block;
+            width: 24%;
+        }
+        .tag_section {
+            label {
+                color: black;
+                text-shadow: none;
+            }
+        }
+
+    }
+    
+}
+
+//!!!!!!!!!!!!!!!!!! EDIT FOOD
+.container_edit_food {
+    margin-top: 150px;
+    margin-bottom: 70px;
+
+   .card-body form{
+       .tag_section{
+           display: flex;
+           justify-content: space-around;
+           .form-check label{
+               color: black!important;
+               text-shadow: none;
+               display: inline-block;
+            }
+        }
+    }
+}
+
+
+
+
+//????????????????????????????
+//????????????????? RESPONSIVE
+
+/* //?  LARGE 1200-768px */
+@media screen and (max-width:1200px) {
+    .edit_container.card{
+
+        .card-body .form-check {
+            display: inline-block;
+            width: 30%;
+        }
+    }
+    
+}
+
+/* //?  MEDIUM 768-480px  */
+@media screen  and (max-width:768px) {
+    .edit_container.card{
+        .card-body .form-check {
+            width: 49%;
+        }
+    }
+    .container_edit_food {
+        .card-body form{
+            .tag_section{
+                 flex-wrap: wrap;
+                 .form-check label{
+                    padding: 0px 10px 10px 10px;
+                 }
+             }
+         }
+    }
+}
+
+// ? SMALL
+@media screen and (max-width:480px) {
+
+    .edit_container.card{
+        width: 85%;
+        .card-body .form-check {
+            display: block;
+            margin-left: 20px;
+        }
+        .form-check-input {
+            margin-left: -2.25rem;
+        }
+    }
+    
+    .container_edit_food {
+        width: 85%;
+        margin: auto;
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+}

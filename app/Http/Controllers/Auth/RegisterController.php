@@ -29,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = RouteServiceProvider::CREATE_RESTOURANT;
 
     /**
      * Create a new controller instance.
@@ -43,22 +43,26 @@ class RegisterController extends Controller
 
     /**
      * Get a validator for an incoming registration request.
-     *
+     * 
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'name' => ['required', 'string', 'max:50'],
+            'lastname' => ['required', 'string', 'max:50'],
+            'email' => ['required', 'string', 'email', 'max:50', 'unique:users'],
+            'phone' => ['required', 'string', 'max:20', 'unique:users'],
+            'vat' => ['required', 'numeric', 'digits:11', 'unique:users'],
+            'billing_address' => ['required', 'string', 'max:30'],
+            'iban' => ['required', 'string', 'max:27', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
-
     /**
      * Create a new user instance after a valid registration.
-     *
+     * !CREATE
      * @param  array  $data
      * @return \App\User
      */
@@ -66,7 +70,12 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
+            'lastname' => $data['lastname'],
             'email' => $data['email'],
+            'phone' => $data['phone'],
+            'vat' => $data['vat'],
+            'billing_address' => $data['billing_address'],
+            'iban' => $data['iban'],
             'password' => Hash::make($data['password']),
         ]);
     }

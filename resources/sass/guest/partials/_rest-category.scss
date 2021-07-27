@@ -1,0 +1,79 @@
+// #category{
+//     background-color: $pallette_orange;
+//     // background-color: #ffeee3; 
+//     .categories{
+
+//         justify-content: space-around;
+//         flex-wrap: wrap;
+//         padding: 20px 0;
+//         margin-bottom: 20px;
+
+//         .category-card {
+//             margin-bottom: 20px;
+//             width: calc( 100% / 6);
+//             transition: 0.5s;
+//             cursor: pointer;
+//             padding: 10px 5px;
+            
+//             &:hover {
+//                 transform: scale(1.10);      
+//             }
+
+//             img{
+//                width: 100%;
+//                filter: drop-shadow(0 0 10px  rgba(0, 0, 0, 0.2));
+//             }
+//             .type-name{
+//                 text-align: center;
+//                 font-size: $font_text_l;
+//                 text-transform: capitalize;
+
+//             }
+//         }
+        
+//     }
+// }
+// a.anchor_up_200 {
+//     display: block;
+//     position: relative;
+//     top: -250px;
+//     visibility: hidden;
+// }
+
+// // ! MEDIA QUESRY
+// /* //?  LARGE 1200-768px */
+// @media screen and (max-width:1200px) {
+
+//     #category{
+//         .categories {
+//             .category-card{
+//                 padding: 3px;
+//                 h4 {
+//                     display: none;
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media screen  and (max-width:768px) {
+
+//     #category{
+//         .categories {
+//             flex-wrap: nowrap;
+//             justify-content: start;
+//             overflow-x: auto;
+            
+//             .category-card{
+//                 margin-bottom: 0px; 
+//                 min-width: 120px;
+//                 padding: 0 5px;
+//             }
+
+//         }
+//     }
+// }
+// @media screen and (max-width:480px) {
+//     .category-card{
+//         min-width: 80px!important;
+//     }
+// }

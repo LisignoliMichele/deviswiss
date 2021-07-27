@@ -1,10 +1,29 @@
 // Body
 $body-bg: #f8fafc;
 
-// Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+//Font style
+@font-face {
+    font-family: lemonmilk;
+    src: url(../fonts/LEMONMILK-Bold.otf);
+}
+@font-face {
+    font-family: montserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: oxygen;
+    src: url(../fonts/Oxygen-Regular.ttf);
+}
+$playfull:'lemonmilk';
+
+$regular: "montserrat";
+
+
+
+
+
+
+
 
 // Colors
 $blue: #3490dc;
@@ -17,3 +36,75 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+
+//Pallette Colors
+$pallette_red : #F30050;
+$pallette_orange : #F67F41;
+$pallette_pink : #FB798A;
+$pallette_pink_dark : #F86A71;
+$pallette_yellow : #F8DC2A; 
+$pallette_yellow_dark : #F6b425;
+$pallette_green : #01CF1E;
+$pallette_green_dark : #05B92D;
+$pallette_purple : #643863;
+$pallette_blue : #2BA4C3;
+
+//Fonts sizes
+$font_titles_l: 45px;
+$font_titles_m: 36px;
+$font_titles_s: 29px;
+$font_text_l: 23px;
+$font_text_m: 19px;
+$font_text_s: 15px;
+$font_text_xs: 12px;
+
+
+//div sizes
+$div_size : 80%;
+$max_width : 1400px;
+
+//Responsive media wuery:
+$mq_extra_small : 320px;
+$mq_small : 480px;
+$mq_medium : 768px;
+$mq_large : 1200px;
+$mq_extra_large : 1400px;
+
+
+
+//! Scrollbar webpage
+ul::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+}
+ul::-webkit-scrollbar-thumb {
+    background: #f30050;
+    border-radius: 15px;
+}
+ul::-webkit-scrollbar-thumb:hover{
+    background: radial-gradient(circle, #f8dc2a 19%,#f30050 100%);
+}
+ul::-webkit-scrollbar-track{
+    background: #f8dc2a;
+    border-radius: 15px;
+    box-shadow: inset -1px 2px 30px #f0f0f0;
+}
+
+//! Scrollbar interne
+ul::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+}
+ul::-webkit-scrollbar-thumb {
+    background: #f30050;
+    border-radius: 15px;
+}
+ul::-webkit-scrollbar-thumb:hover{
+    background: radial-gradient(circle, #f8dc2a 19%,#f30050 100%);
+}
+ul::-webkit-scrollbar-track{
+    background: #f8dc2a;
+    border-radius: 15px;
+    box-shadow: inset -1px 2px 30px #f0f0f0;
+}

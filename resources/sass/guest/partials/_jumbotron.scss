@@ -1,0 +1,72 @@
+.jumbotron{
+   background-color: #000;
+   height: 100vh;
+   min-height: 550px;
+   display: flex;
+   justify-content: center; 
+   overflow: hidden;
+   position: relative;
+   @media screen and (max-width:1200px) {  
+      padding: 0 10%;             
+   }
+      .logo{
+         margin-top: 200px;
+         width: 500px;
+         position: relative;
+         @media screen and (max-height:450px) {  
+            margin-top: 50px;             
+         }
+         img{
+            width: 80%;
+         }
+         .map{
+            position: absolute;
+            right: -60%;
+            @media screen and (max-width:1200px) {
+               right: -20%;               
+            }
+            video{
+               width: 100%;
+            }
+         }
+      }
+   .getFood{
+      display: flex;
+      position: absolute;
+      bottom: 60px;
+      left: 60px;
+      cursor: pointer;
+      color: #fff;
+      transition: all 0.3s;
+      img{
+         margin-left: 10px;
+         max-width: 10px;
+      }
+      
+      animation-name: thunders;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      @keyframes thunders {
+         0%{
+            opacity: 1;
+         }
+         25%{
+            opacity: 0.5;
+         }
+         50%{
+            opacity: 1;
+         }
+         75%{
+            opacity: 0.2;
+         }
+         100%{
+            opacity: 1;
+         }
+      } 
+      &:hover{
+         animation-duration: 0s;
+         transform: scale(1.1);
+      }
+   }
+}

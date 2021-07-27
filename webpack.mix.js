@@ -1,3 +1,4 @@
+const { js } = require('laravel-mix');
 const mix = require('laravel-mix');
 
 /*
@@ -11,7 +12,10 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css').options({
+mix.js('resources/js/guest.js', 'public/js')
+    js('resources/js/home.js', 'public/js')        
+    js('resources/js/payment.js', 'public/js')
+    .sass('resources/sass/admin/app.scss', 'public/css')
+    .sass('resources/sass/guest/guest.scss', 'public/css').options({
         processCssUrls:false
      });
